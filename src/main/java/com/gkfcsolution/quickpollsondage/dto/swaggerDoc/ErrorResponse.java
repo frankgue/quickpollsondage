@@ -14,7 +14,7 @@ public class ErrorResponse {
     @Schema(description = "Code HTTP de l'erreur", example = "400")
     private int status;
 
-    @Schema(description = "Message d'erreur général", example = "Le titre est obligatoire")
+    @Schema(description = "Message d'erreur général", example = "La question est obligatoire")
     private String message;
 
     @Schema(description = "Détails supplémentaires de l'erreur", example = "[\"Le champ 'question' ne peut pas être vide\"]")
