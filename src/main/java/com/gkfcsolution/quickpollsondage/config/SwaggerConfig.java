@@ -179,4 +179,33 @@ public class SwaggerConfig {
                 .build();
     }
 
+    @Bean
+    public GroupedOpenApi v3Api() {
+        return GroupedOpenApi.builder()
+                .group("v3") // Le nom du groupe pour cette version
+                .pathsToMatch("/v3/**") // Regroupe toutes les routes correspondant à /v2/*
+                .addOpenApiCustomizer(openApi -> openApi
+                        .info(new Info()
+                                .title("API de gestion des sondages - Version 3")
+                                .version("3.0")
+                                .description("Documentation de l'API des sondages pour la version 3 avec Spring Boot 3 et OpenAPI")
+                                .contact(new Contact()
+                                        .name("GKFCSolution - Frank GUEKENG")
+                                        .email("gkfcsolution@gmail.com")
+                                        .url("https://www.gkfcsolution.com")
+                                )
+                                .license(new License()
+                                        .name("Apache 2.0")
+                                        .url("https://www.apache.org/licenses/LICENSE-2.0.html")
+                                )
+                        )
+                        .servers(List.of(
+                                new Server().url("http://localhost:8080/v3").description("Local Server v3"),
+                                new Server().url("https://api.frankguekeng.com/v3").description("Preproduction Server v3"),
+                                new Server().url("https://api.gkfcsolution.com/v3").description("Production Server v3")
+                        ))
+                )
+                .build();
+    }
+
 }

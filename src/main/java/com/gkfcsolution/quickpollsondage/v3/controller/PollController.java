@@ -1,4 +1,4 @@
-package com.gkfcsolution.quickpollsondage.v2.controller;
+package com.gkfcsolution.quickpollsondage.v3.controller;
 
 import com.gkfcsolution.quickpollsondage.dto.swaggerDoc.ErrorResponse;
 import com.gkfcsolution.quickpollsondage.dto.swaggerDoc.PollResponse;
@@ -16,10 +16,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-@RestController("pollControllerV2")
-@RequestMapping("/v2/")
+@RestController("pollControllerV3")
+@RequestMapping("/v3/")
 @Tag(name = "Poll Controller", description = "API permettant de gérer les sondages")
 public class PollController {
 

@@ -1,4 +1,4 @@
-package com.gkfcsolution.quickpollsondage.v2.controller;
+package com.gkfcsolution.quickpollsondage.v3.controller;
 
 import com.gkfcsolution.quickpollsondage.dto.OptionCount;
 import com.gkfcsolution.quickpollsondage.dto.VoteResult;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController("computeResultControllerV2")
-@RequestMapping("/v2/")
+@RestController("computeResultControllerV3")
+@RequestMapping("/v3/")
 @Tag(name = "computeResult Controller")
 public class ComputeResultController {
 

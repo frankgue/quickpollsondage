@@ -1,4 +1,4 @@
-package com.gkfcsolution.quickpollsondage.v2.controller;
+package com.gkfcsolution.quickpollsondage.v3.controller;
 
 import com.gkfcsolution.quickpollsondage.model.Vote;
 import com.gkfcsolution.quickpollsondage.repository.VoteRepository;
@@ -11,8 +11,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 
-@RestController("voteControllerV2")
-@RequestMapping("/v2/")
+@RestController("voteControllerV3")
+@RequestMapping("/v3/")
 @Tag(name = "Vote Controller", description = "API permettant de gérer les Votes")
 public class VoteController {
 
